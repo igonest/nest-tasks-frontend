@@ -42,13 +42,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //     </BrowserRouter>
 //   </Provider>
 // );
-root.render(
-  // <Provider {...stores}>
-  <BrowserRouter basename={process.env.PUBLIC_URL} history={browserHistory}>
-    <App />
-  </BrowserRouter>
-  // </Provider>
-);
+root.render(<App />);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
