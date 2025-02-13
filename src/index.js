@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Provider } from "mobx-react";
+// import { Provider } from "mobx-react";
 import { BrowserRouter } from "react-router-dom";
 import { createBrowserHistory } from "history";
 
@@ -34,22 +34,21 @@ browserHistory.listen((update) => {
   stores.routerStore.setLocation(update.location);
 });
 
-// Add this for debugging
-console.log("Public URL:", process.env.PUBLIC_URL);
-
-// Add this to verify App import
-console.log("App import:", App);
-
-try {
-  const root = ReactDOM.createRoot(document.getElementById("root"));
-  console.log("Root element found:", !!document.getElementById("root"));
-
-  // Try rendering without Router first to isolate the issue
-  root.render(<App />);
-  console.log("Render called");
-} catch (error) {
-  console.error("Error during render:", error);
-}
+const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(
+//   <Provider {...stores}>
+//     <BrowserRouter basename={process.env.PUBLIC_URL} history={browserHistory}>
+//       <App />
+//     </BrowserRouter>
+//   </Provider>
+// );
+root.render(
+  // <Provider {...stores}>
+  <BrowserRouter basename={process.env.PUBLIC_URL} history={browserHistory}>
+    <App />
+  </BrowserRouter>
+  // </Provider>
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

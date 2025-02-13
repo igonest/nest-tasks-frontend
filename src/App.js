@@ -29,17 +29,11 @@
 const App = () => {
   console.log("Before return in App");
 
-  // Add error boundary
-  try {
-    return (
-      <div>
-        <h1>Test Page</h1>
-      </div>
-    );
-  } catch (error) {
-    console.error("Error in App render:", error);
-    return <div>Error occurred</div>;
-  }
+  return (
+    <div>
+      <h1>Test Page</h1>
+    </div>
+  );
 };
 
 // Log that the file is being processed
