@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "https://igonest.github.io/nest-tasks-frontend/static/css/main.79e069ca.css",
+    "main.js": "https://igonest.github.io/nest-tasks-frontend/static/js/main.15ad275d.js",
+    "index.html": "https://igonest.github.io/nest-tasks-frontend/index.html",
+    "main.79e069ca.css.map": "https://igonest.github.io/nest-tasks-frontend/static/css/main.79e069ca.css.map",
+    "main.15ad275d.js.map": "https://igonest.github.io/nest-tasks-frontend/static/js/main.15ad275d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79e069ca.css",
+    "static/js/main.15ad275d.js"
+  ]
+}
