@@ -30,6 +30,7 @@ jobs:
           REACT_APP_BASE_URL: ${{ secrets.REACT_APP_BASE_URL }}
           PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
           REACT_APP_PUBLIC_PATH: ${{ secrets.PUBLIC_URL }}
+          REACT_APP_DEBUG: true
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
