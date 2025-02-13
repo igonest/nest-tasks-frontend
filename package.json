@@ -1,0 +1,106 @@
+{
+  "name": "nestjs-course-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "axios": "^1.6.7",
+    "history": "5.3.0",
+    "mobx": "^6.12.0",
+    "mobx-react": "^9.1.0",
+    "mobx-react-router": "^5.0.0",
+    "query-string": "^9.1.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router": "^6.22.1",
+    "react-router-dom": "6.22.1",
+    "react-scripts": "^5.0.1",
+    "rxjs": "^7.8.1",
+    "sass": "1.71.0",
+    "styled-components": "^6.1.8",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "start": "cross-env PORT=3001 react-app-rewired start",
+    "build": "cross-env react-app-rewired build",
+    "test": "cross-env react-app-rewired test --env=jsdom",
+    "eject": "cross-env react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ],
+    "rules": {
+      "no-unused-vars": "warn",
+      "no-console": "warn",
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "jsx-quotes": [
+        "error",
+        "prefer-double"
+      ],
+      "prefer-const": "warn",
+      "max-len": [
+        "warn",
+        {
+          "code": 120
+        }
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "legacyDecorators": true
+      }
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.23.9",
+    "cross-env": "^7.0.3",
+    "customize-cra": "^1.0.0",
+    "react-app-rewired": "^2.2.1",
+    "sass-loader": "14.1.0",
+    "eslint": "^8.x",
+    "eslint-config-react-app": "^7.x",
+    "eslint-plugin-react": "^7.x",
+    "eslint-plugin-react-hooks": "^4.x"
+  },
+  "babel": {
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": false
+        }
+      ]
+    ]
+  },
+  "sassConfig": {
+    "api": "modern"
+  }
+}
