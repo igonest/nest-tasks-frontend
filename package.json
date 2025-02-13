@@ -102,5 +102,6 @@
   },
   "sassConfig": {
     "api": "modern"
-  }
+  },
+  "homepage": "https://igonest.github.io/nest-tasks-frontend"
 }

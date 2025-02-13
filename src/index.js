@@ -36,7 +36,7 @@ browserHistory.listen((update) => {
 
 const Root = (
   <Provider {...stores}>
-    <BrowserRouter history={browserHistory}>
+    <BrowserRouter basename={process.env.PUBLIC_URL} history={browserHistory}>
       <App />
     </BrowserRouter>
   </Provider>
