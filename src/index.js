@@ -37,14 +37,21 @@ browserHistory.listen((update) => {
 // Add this for debugging
 console.log("Public URL:", process.env.PUBLIC_URL);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <Provider {...stores}>
-    <BrowserRouter basename={process.env.PUBLIC_URL} history={browserHistory}>
-      <App />
-    </BrowserRouter>
-  </Provider>
-);
+try {
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  console.log("Root element found:", !!document.getElementById("root"));
+
+  root.render(
+    <Provider {...stores}>
+      <BrowserRouter basename={process.env.PUBLIC_URL} history={browserHistory}>
+        <App />
+      </BrowserRouter>
+    </Provider>
+  );
+  console.log("Render called");
+} catch (error) {
+  console.error("Error during render:", error);
+}
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
