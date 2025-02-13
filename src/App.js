@@ -25,13 +25,24 @@
 //     );
 //   }
 // }
-function App() {
-  console.log("App component rendered");
-  return (
-    <div style={{ padding: "20px" }}>
-      <h1>Hello World</h1>
-    </div>
-  );
-}
+
+const App = () => {
+  console.log("Before return in App");
+
+  // Add error boundary
+  try {
+    return (
+      <div>
+        <h1>Test Page</h1>
+      </div>
+    );
+  } catch (error) {
+    console.error("Error in App render:", error);
+    return <div>Error occurred</div>;
+  }
+};
+
+// Log that the file is being processed
+console.log("App.js is being processed");
 
 export default App;

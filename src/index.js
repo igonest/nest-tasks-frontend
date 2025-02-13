@@ -37,17 +37,15 @@ browserHistory.listen((update) => {
 // Add this for debugging
 console.log("Public URL:", process.env.PUBLIC_URL);
 
+// Add this to verify App import
+console.log("App import:", App);
+
 try {
   const root = ReactDOM.createRoot(document.getElementById("root"));
   console.log("Root element found:", !!document.getElementById("root"));
 
-  root.render(
-    <Provider {...stores}>
-      <BrowserRouter basename={process.env.PUBLIC_URL} history={browserHistory}>
-        <App />
-      </BrowserRouter>
-    </Provider>
-  );
+  // Try rendering without Router first to isolate the issue
+  root.render(<App />);
   console.log("Render called");
 } catch (error) {
   console.error("Error during render:", error);

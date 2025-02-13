@@ -11,9 +11,6 @@ import CreateTaskPage from "./pages/create-task/CreateTaskPage";
 @observer
 class App extends Component {
   render() {
-    // Add this for debugging
-    console.log("App component rendered");
-
     return (
       <Routes>
         <Route path="/" element={<SignInPage />} />
