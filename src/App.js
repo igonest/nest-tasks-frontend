@@ -1,29 +1,37 @@
-import React, { Component } from "react";
-import { Routes, Route } from "react-router-dom";
-import { inject, observer } from "mobx-react";
+// import React, { Component } from "react";
+// import { Routes, Route } from "react-router-dom";
+// import { inject, observer } from "mobx-react";
 
-import SignInPage from "./pages/signin/SignInPage";
-import SignUpPage from "./pages/signup/SignUpPage";
-import TasksPage from "./pages/tasks/TasksPage";
-import CreateTaskPage from "./pages/create-task/CreateTaskPage";
+// import SignInPage from "./pages/signin/SignInPage";
+// import SignUpPage from "./pages/signup/SignUpPage";
+// import TasksPage from "./pages/tasks/TasksPage";
+// import CreateTaskPage from "./pages/create-task/CreateTaskPage";
 
-@inject("routerStore")
-@observer
-class App extends Component {
-  render() {
-    // Add this for debugging
-    console.log("App component rendered");
+// @inject("routerStore")
+// @observer
+// class App extends Component {
+//   render() {
+//     // Add this for debugging
+//     console.log("App component rendered");
 
-    return (
-      <Routes>
-        <Route path="/" element={<SignInPage />} />
-        <Route path="/signin" element={<SignInPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/tasks" element={<TasksPage />} />
-        <Route path="/tasks/create" element={<CreateTaskPage />} />
-      </Routes>
-    );
-  }
+//     return (
+//       <Routes>
+//         <Route path="/" element={<SignInPage />} />
+//         <Route path="/signin" element={<SignInPage />} />
+//         <Route path="/signup" element={<SignUpPage />} />
+//         <Route path="/tasks" element={<TasksPage />} />
+//         <Route path="/tasks/create" element={<CreateTaskPage />} />
+//       </Routes>
+//     );
+//   }
+// }
+function App() {
+  console.log("App component rendered");
+  return (
+    <div style={{ padding: "20px" }}>
+      <h1>Hello World</h1>
+    </div>
+  );
 }
 
 export default App;
